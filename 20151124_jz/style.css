@@ -1,0 +1,246 @@
+
+*{ margin:0; padding:0;}
+html{ width:100%; height:100%; overflow:hidden;}
+body{ width:100%; height:100%; font: 14px/1.5 Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;}
+li{ list-style:none;}
+#main{ width:100%; height:100%; position:relative; margin:0 auto;}
+#musicList{ width:100%; height:100%; background:url(img/bg.jpg) no-repeat; background-size:cover;}
+#musicList .list_title{ width:100%; height:40px; background:rgba(41,171,226,0.6); font-size:20px; line-height:40px; text-align:center; color:white; position:absolute; top:0;}
+#musicList .list_tip{ width:16px; height:16px; background:url(img/tip.png) no-repeat; background-size:cover; position:absolute; right:15px; top:12px;}
+
+#musicList .list_content{ width:100%; position:absolute; top:40px; bottom:65px; overflow:hidden;}
+#musicList .list_content ul{ width:100%; position:absolute; top:0; left:0; transform:translate3d(0,0,0);}
+#musicList .list_content ul li{ width:100%; height:60px; background:rgba(26,26,26,0.6); border-bottom:1px #999999 solid; box-sizing:border-box;transition:.2s;}
+#musicList .list_content ul li.active{ border-left:5px #29abe2 solid;}
+
+#musicList .list_audio{ width:100%; height:65px; background:url(img/list_audioBg.png) repeat-x; position:absolute; bottom:0;	transition:.5s;
+    -webkit-transition:.5s;}
+#musicList .list_audioImg{ width:50px; border-radius:50%; float:left; margin:7px 0 0 15px;}
+#musicList .list_audioImg.move{animation:4s linear infinite audioImgMove;-webkit-animation:4s linear infinite audioImgMove;}/*播放音乐的时候图像旋转*/
+@keyframes audioImgMove {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+@-webkit-keyframes audioImgMove {
+    0%{-webkit-transform: rotate(0deg);}
+    100%{-webkit-transform: rotate(360deg);}
+}
+#musicList .list_audioText{ float:left;}
+#musicList .list_audioBtn{ float:right; width:32px; height:32px; background:url(img/list_audioPlay.png) no-repeat; background-size:cover; margin:16px 15px 0 0; display:none;}
+
+
+.title{ color:white; font-size:15px; padding:10px 0 0 20px;}
+.name{ color:#b3b3b3; font-size:13px; padding:2px 0 0 20px;}
+/*详细页*/
+#musicDetails{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background: url(img/detailsBg.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+}
+#musicDetails .details_title{
+    width:100%;
+    height:40px;
+    background: rgba(41,171,226,0.6);
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color:#fff;
+    position: absolute;
+    top:0;
+}
+#musicDetails .details_title span{font-size: 12px;margin-left:10px;}
+#musicDetails .details_tip{width:19px;height:10px;position:absolute;right:15px;top:15px;background:url(img/details_arrow.png);background-size: cover;}
+/*歌词*/
+#musicDetails .details_lyric{
+    width:100%;
+    position: absolute;
+    top:40px;
+    bottom:150px;
+    overflow: hidden;
+    transition:.5s;
+    -webkit-transition:.5s;
+}
+#musicDetails .details_lyric ul{
+    width:100%;
+    text-align: center;
+    color:#fff;
+    font-size: 12px;
+    position: absolute;
+    left:0;
+    top:0;
+    transition:.2s;
+    -webkit-transition:.2s;
+}
+#musicDetails .details_lyric li{
+    margin-top: 15px;
+}
+#musicDetails .details_lyric .active{
+    color:#00ffff;
+}
+#musicDetails  .detail_audio{
+    width:100%;
+    height:150px;
+    position: absolute;
+    bottom:0;
+    transition:.5s;
+    -webkit-transition:.5s;
+}
+#musicDetails .details_audioAll{
+    width:200px;
+    margin:20px auto;
+    position: relative;
+}
+#musicDetails .details_audioProUp{
+    width:0;
+    height:2px;
+    background: #29abe2;
+    position: absolute;
+    left:0;
+    top:0;
+
+}
+#musicDetails .details_audioPro{
+    width:100%;
+    height:2px;
+    background: #fff;
+}
+#musicDetails .details_audioProBar{
+    width:15px;
+    height:15px;
+    position: absolute;
+    left:0;
+    top:0;
+    margin:-7px;
+    background: #29abe2;
+    border-radius: 50%;
+}
+#musicDetails .details_nowTime{position:absolute;font-size: 12px;color:#b3b3b3;top:-10px;left:-45px;}
+#musicDetails .details_allTime{position:absolute;font-size: 12px;color:#b3b3b3;top:-10px;right:-45px;}
+#musicDetails .details_play{width: 55px;height:55px;background: url(img/details_play.png) no-repeat;background-size: cover;position: absolute;left:50%;margin-left:-27px;top:30px;}
+#musicDetails .details_prev{width: 37px;height:37px;background: url(img/details_prev.png) no-repeat;background-size: cover;position: absolute;left:10px;top:37px;}
+#musicDetails .details_next{width: 37px;height:37px;background: url(img/details_next.png) no-repeat;background-size: cover;position: absolute;right:10px;top:37px;}
+#musicDetails  .detail_btn {
+    width:100%;
+    position: absolute;
+    bottom:10px;
+    text-align: center;
+
+}
+
+#musicDetails  .detail_btn li{
+    width:7px;
+    height:7px;
+    display: inline-block;
+    border-radius: 5px;
+    background:#29abe2;
+
+
+}
+#musicDetails  .detail_btn li+li{
+    margin-left:3px;
+}
+#musicDetails  .detail_btn li.active{
+    width:21px;
+}
+/*留言*/
+#musicDetails .details_message{
+    width: 80%;
+    position: absolute;
+    bottom:50px;
+    top:40px;
+    margin-left: 10%;
+    transition:.5s;
+    -webkit-transition:.5s;
+}
+#musicDetails .details_message textarea{
+    width: 100%;
+    height: 100px;
+    background-color:#9babb2;
+    border-radius: 5px;
+    margin-top: 10px;
+
+}
+#musicDetails .details_message input{
+    width: 100%;
+    height: 30px;
+    color:#fff;
+    background-color: rgba(41,171,226,0.6);
+    border-radius:5px;
+    border:none;
+
+}
+::-webkit-input-placeholder{color:#000;}
+::-moz-input-placeholder{color:#000;}
+#musicDetails .details_message ul{width: 100%;}
+#musicDetails .details_message li{ background:rgba(26,26,26,0.6); border-radius:5px; padding:10px; color:white; float:left; clear:both; margin-top:10px; transition:1s; -webkit-transition:1s;}
+/*加载*/
+#loading{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    overflow: hidden;
+    background: #000;
+    z-index:9999;
+}
+#loading .content1,#loading .content2{
+    width:30px;
+    height:30px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin:-15px;
+}
+#loading .content1 div,#loading .content2 div{
+ width:8px;
+    height:8px;
+    position: absolute;
+    border-radius: 100%;
+  background:#fff;
+    animation:2s linear infinite loadingMove;
+    -webkit-animation:3s linear infinite loadingMove;
+}
+#loading .content2{
+    transform:rotate(45deg);
+}
+#loading .content1 .arc1,#loading .content2 .arc1{
+ left:0;
+    top:0;
+}
+#loading .content1 .arc2,#loading .content2 .arc2{
+ right:0;
+    top:0;
+}
+#loading .content1 .arc3,#loading .content2 .arc3{
+  bottom:0;
+    right:0;
+}
+#loading .content1 .arc4,#loading .content2 .arc4{
+ bottom:0;
+    left:0;
+}
+@keyframes loadingMove {
+    0%{transform:scale(0)}
+    50%{transform:scale(1)}
+    100%{transform:scale(0)}
+}
+@-webkit-keyframes loadingMove {
+    0%{transform:scale(0)}
+    50%{transform:scale(1)}
+    100%{transform:scale(0)}
+}
+#loading .content1 .arc1{animation-delay: -1.8s;}
+#loading .content2 .arc1{animation-delay: -1.5s;}
+#loading .content1 .arc2{animation-delay: -1.4s;}
+#loading .content2 .arc2{animation-delay: -1.3s;}
+#loading .content1 .arc3{animation-delay: -.9s;}
+#loading .content2 .arc3{animation-delay: -.8s;}
+#loading .content1 .arc4{animation-delay: -.6s;}
+#loading .content2 .arc4{animation-delay: -.5s;}

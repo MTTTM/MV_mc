@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+
+	<title>ajax实战-音乐播放器</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-2.1.3.min.js"></script>
+</head>
+<body>
+<div id="main">
+	<div id="loading">
+		<div class="content1">
+			<div class="arc1"></div>
+			<div class="arc2"></div>
+			<div class="arc3"></div>
+			<div class="arc4"></div>
+		</div>
+		<div class="content2">
+			<div class="arc1"></div>
+			<div class="arc2"></div>
+			<div class="arc3"></div>
+			<div class="arc4"></div>
+		</div>
+		
+	</div>
+	<div id="musicList">
+		<div id="listTitle" class="list_title">妙味课堂音乐播放器<span class="list_tip"></span></div>
+		<div id="listContent" class="list_content">
+			<ul id="listContentUl">
+				<!--<li>
+                    <h3 class="title">逆战</h3>
+                    <p class="name">张杰</p>
+                </li>-->
+
+			</ul>
+		</div>
+		<div class="list_audio" id="list_audio">
+			<img class="list_audioImg" src="img/miaov.jpg" id="listAudioImg">
+			<div class="list_audioText" id="list_audioText">
+				<h3 class="title">妙味课堂</h3>
+				<p class="name">音乐播放器</p>
+			</div>
+			<div class="list_audioBtn" id="list_audioBtn"></div>
+		</div>
+		<div id="musicDetails">
+			<div class="details_title" id="details_title">
+				<div class="details_name" id="details_name">异乡人 <span>李建</span></div>
+				<span class="details_tip"></span>
+			</div>
+			<div class="details_lyric" id="details_lyric">
+				<ul id="detailsLyricUl"></ul>
+			</div>
+			<div class="detail_audio" id="detailsAudio">
+				<div class="details_audioAll">
+					<div class="details_audioPro">
+						<div class="details_audioProUp" id="detailsAudioProUp"></div>
+						<div class="details_audioProBar" id="detailsAudioProBar"></div>
+					</div>
+                    <div class="details_nowTime" id="detailsNowTime">00:00</div>
+					<div class="details_allTime" id="detailsAllTime">13:13</div>
+					<div class="details_play" id="detailsPlay"></div>
+					<div class="details_prev" id="detailsPrev"></div>
+					<div class="details_next" id="detailsNext"></div>
+				</div>
+			</div>
+			<div class="details_message" id="detailsMessage">
+				<textarea placeholder="文明上网，理性留言" id="detailsMessageTa"></textarea>
+				<input type="button" value="发表" id="detailsMessageBtn"/>
+				<ul id="detailsMessageUl">
+					<li>留言测试</li>
+					<li>留言测试</li>
+					<li>留言测试</li>
+				</ul>
+			</div>
+			<ul class="detail_btn" id="detailsBtn">
+				<li class="active"></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<audio id="audio1"></audio>
+<script src="music.js"></script>
+</body>
+</html>
