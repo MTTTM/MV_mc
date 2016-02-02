@@ -1,0 +1,157 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台模板管理系统</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<div class="top"></div>
+<div id="header">
+	<div class="logo"><a href="#!//">***后台管理系统</a></div>
+	<div class="navigation" >
+		<ul  ms-controller="login">
+		 	<li>欢迎您！</li>
+			<li><a href="" id="username">{{json.username}}</a></li>
+			<li><a href="#!/login">修改密码</a></li>
+			<li><a href="">设置</a></li>
+			<li><a href="">退出</a></li>
+		</ul>
+	</div>
+</div>
+<div id="content"  ms-controller="root">
+	<div class="left_menu">
+				<ul id="nav_dot">
+      <li>
+          <h4 class="M1"><span></span>系统公告</h4>
+          <div class="list-item none">
+            <a href='javascript:;'>上传音乐</a>
+            <a href='javascript:;'>上传音乐</a>
+            <a href='javascript:;'>上传音乐</a>
+            <a href='javascript:;'>上传音乐</a>
+            <a href='javascript:;'>上传音乐</a>
+            <a href='javascript:;'>上传音乐</a>
+          </div>
+        </li>
+        <li>
+          <h4 class="M2"><span></span>工单处理</h4>
+          <div class="list-item none">
+            <a href=''>工单处理1</a>
+            <a href=''>工单处理2</a>
+            <a href=''>工单处理3</a>
+            <a href=''>工单处理4</a>
+            <a href=''>工单处理5</a>
+           </div>
+        </li>
+        <li>
+          <h4 class="M3"><span></span>基础教学</h4>
+          <div class="list-item none">
+            <a href=''>基础教学1</a>
+            <a href=''>基础教学2</a>
+            <a href=''>基础教学3</a>
+          </div>
+        </li>
+				<li>
+          <h4 class="M4"><span></span>评论管理</h4>
+          <div class="list-item none">
+            <a href=''>评论管理1</a>
+            <a href=''>评论管理2</a>
+            <a href=''>评论管理3</a>
+          </div>
+        </li>
+				<li>
+          <h4 class="M5"><span></span>调研问卷</h4>
+          <div class="list-item none">
+            <a href=''>调研问卷1</a>
+            <a href=''>调研问卷2</a>
+            <a href=''>调研问卷3</a>
+          </div>
+        </li>
+				<li>
+          <h4  class="M6"><span></span>数据统计</h4>
+          <div class="list-item none">
+            <a href=''>数据统计1</a>
+            <a href=''>数据统计2</a>
+            <a href=''>数据统计3</a>
+          </div>
+        </li>
+				<li>
+          <h4  class="M7"><span></span>奖励管理</h4>
+          <div class="list-item none">
+            <a href=''>奖励管理1</a>
+            <a href=''>奖励管理2</a>
+            <a href=''>奖励管理3</a>
+          </div>
+        </li>
+				<li>
+          <h4   class="M8"><span></span>字典维护</h4>
+          <div class="list-item none">
+            <a href=''>字典维护1</a>
+            <a href=''>字典维护2</a>
+            <a href=''>字典维护3</a>
+						<a href=''>字典维护4</a>
+            <a href=''>字典维护5</a>
+            <a href=''>字典维护6</a>
+						<a href=''>字典维护7</a>
+            <a href=''>字典维护8</a>
+            <a href=''>字典维护9</a>
+						<a href=''>字典维护4</a>
+            <a href=''>字典维护5</a>
+            <a href=''>字典维护6</a>
+						<a href=''>字典维护7</a>
+            <a href=''>字典维护8</a>
+            <a href=''>字典维护9</a>
+          </div>
+        </li>
+				<li>
+          <h4  class="M9"><span></span>内容管理</h4>
+          <div class="list-item none">
+            <a href=''>内容管理1</a>
+            <a href=''>内容管理2</a>
+            <a href=''>内容管理3</a>
+          </div>
+        </li>
+				<li>
+          <h4   class="M10"><span></span>系统管理</h4>
+          <div class="list-item none">
+            <a href=''>系统管理1</a>
+            <a href=''>系统管理2</a>
+            <a href=''>系统管理3</a>
+          </div>
+        </li>
+  </ul>
+		</div>
+		<div class="m-right">
+			<div class="right-nav">
+					<ul>
+							<li><img src="images/home.png"></li>
+								<li style="margin-left:25px;">您当前的位置：</li>
+								<li><a href="#">系统公告</a></li>
+								<li>></li>
+								<li><a href="#">最新公告</a></li>
+						</ul>
+			</div>
+			<div class="main" ms-include-src="templateUrl">
+              {{templateUrl}}
+
+			</div>
+             <div  ms-view="hint"></div>
+		</div>
+</div>
+<div class="bottom"></div>
+<script>
+  var assetsUrl="assets/lib/";
+  var ctrUrl="controller/"
+</script>
+<script type="text/javascript" charset="utf-8" src="assets/lib/jquery/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="assets/lib/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="assets/lib/ueditor/ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="assets/lib/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="assets/lib/requirejs/require.js"></script>
+<script src="assets/lib/require-config.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script src="router/root.js"></script>
+</body>
+</html>

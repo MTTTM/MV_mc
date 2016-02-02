@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ms-controller="login">{{json.username}}</div>
+<script>
+    var assetsUrl="assets/lib/";
+</script>
+
+<script src="assets/lib/avalon/avalon.js"></script>
+<script>
+    ///**
+    // * Created by Administrator on 2015/12/17.
+    // */
+
+        var json = {
+            username:"",
+            data:"",
+            status:""
+        };
+        var verifyVm = avalon.define({
+            $id: "login",
+            json:{
+                username:"username",
+                data:"dfdf",
+                status:"1"
+            }
+        });
+
+</script>
+</body>
+</html>
