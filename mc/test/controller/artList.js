@@ -32,10 +32,9 @@ define(["jquery","pager"], function ($) {//"css!../tmp1.css"
                 artList.page.currentPage = data.currentPage;
                 avalon.router.go("artListPage", {type:artList.page.type,page: data.currentPage});
                 getdata();
+            } ,onInit: function(gridVM) { //★★
+                simplegridVM = gridVM; //方便外面调用
             }
-            //onInit: function(gridVM) { //★★★
-            //    simplegridVM = gridVM; //方便外面调用
-            //}
         },
         page:{
             "type":"为啥没效果",
@@ -66,7 +65,7 @@ define(["jquery","pager"], function ($) {//"css!../tmp1.css"
                     };
                     artList.list = data.list;
                     //分页
-                     var bb = avalon.vmodels.aa;
+                   //  var bb = avalon.vmodels.aa;
                     artList.$watch("artTypeId", function (a, b) {
                        // console.log("新的：" + a + " 旧的：" + b);
                         if (a) {
@@ -75,11 +74,11 @@ define(["jquery","pager"], function ($) {//"css!../tmp1.css"
                         }
                     });
 
-                    if (bb) {
-                        bb.totalItems = data.page.totalItems;
-                        bb.currentPage =  data.page.currentPage;
-                    }
-                   // simplegridVM= artList.page;
+                    //if (bb) {
+                    //    bb.totalItems = data.page.totalItems;
+                    //    bb.currentPage =  data.page.currentPage;
+                    //}
+                    simplegridVM= artList.page;
                 }
                 else{
                     artList.list=[];
