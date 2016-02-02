@@ -1,0 +1,20 @@
+.main_art{
+
+}
+.main_art .content,.main_art  span,.main_art p{
+    white-space: normal!important;
+    line-height: 1.4;
+}
+.main_art h3{
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.main_art .h2{
+    color:#999;
+    text-align: center;
+}
+.main_art .art{
+    padding:20px 40px;
+}

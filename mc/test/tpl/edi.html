@@ -1,0 +1,33 @@
+<div class="main main_edi">
+    <h2>{{title}} <small style="color:red">没有做任何安全处理，请不要提交任何测试数据，谢谢</small></h2>
+    <div ms-controller="edi">
+        <div class="area">
+            <form id="edi-form">
+              <div class="form-group">
+                  <label for="title">标题:</label>
+                  <input type="text" name="title" ms-duplex="ediContent.title"/>
+              </div>
+                <div class="form-group">
+                    <label for="type">分类:</label>
+                    <select ms-duplex="ediContent.type">
+                        <option value="0">未分类</option>
+                        <option value="1">小小说</option>
+                        <option value="2">都市</option>
+                        <option value="3">乡村</option>
+                    </select>
+                    <input type="text" name="type" placeholder="新增分类暂未同步到分类里面"  ms-duplex="type"/>
+                    <button type="button" class="btn btn-submit" ms-click="addTypeFn()">新增分类</button>
+                </div>
+                <div class="form-group clearfix">
+                    <label for="content">内容:</label>
+                        <textarea name="content" id="myEditor"  ms-duplex="ediContent.content"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-submit">提交</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,17 @@
+.main_artList li .content,.main_artList li  .content span,.main_artList li  .content p{
+    white-space: normal!important;
+    line-height: 1.4;
+}
+.main_artList li+li{
+    margin-top:20px;
+}
+.main_artList li .h2{
+    line-height: 1.4;
+    color:#999;
+}
+.main_artList li h4{
+    font-weight: bold;
+}
+.area{
+    padding-bottom:20px;
+}

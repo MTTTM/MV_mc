@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/tmp1.css"/>
+    <link rel="stylesheet" href="css/tmp2.css"/>
+    <link rel="stylesheet" href="css/edi.css"/>
+    <link rel="stylesheet" href="css/artList.css"/>
+    <link rel="stylesheet" href="css/art.css"/>
+    <link rel="stylesheet" href="../assets/lib/pager/avalon.pager.css"/>
+</head>
+<body>
+    <div class="clearfix container" ms-controller="root">
+        <div class="left">
+            <div class="userLogin">
+                <span>欢迎{{login.username}}</span>
+                <a href="#!/exit">退出</a>
+                <input type="hidden" name="username" ms-duplex="login.username"/>
+                <input type="hidden" name="password"  ms-duplex="login.password"/>
+            </div>
+            <ul>
+                <li><a ms-attr-href="#!/">默认</a></li>
+                <li><a href="#!/tmp2">tmp2</a></li>
+                <li><a href="#!/edi">编辑文章</a></li>
+                <li><a href="#!/login">登录</a></li>
+            </ul>
+            <ul>
+                <li class="tit">文章分类</li>
+                <li ms-repeat="TypeArray" ms-class="current:root.current==($index+1)">
+                    <!--<a ms-href="#!/artList/{{el.id}}">{{el.type}}</a>-->
+                    <a ms-href="#!/article/category/{{el.id}}">{{el.type}}</a>
+                </li>
+            </ul>
+            <button id="troggle">触发模板2</button>
+        </div>
+        <div class="right" ms-view></div>
+    </div>
+    <script>
+        var assetsUrl="../assets/lib/";
+        var commonApi="";
+        var imageInterfaceUrl="";
+    </script>
+    <script src="../assets/lib/requirejs/require.js" ></script>
+    <script src="../assets/lib/require-config.js"></script>
+    <script src="router.js"></script>
+
+</body>
+</html>

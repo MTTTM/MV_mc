@@ -1,0 +1,10 @@
+<div class="main main_art">
+    <h2>{{title}}</h2>
+    <div ms-controller="art">
+        <div class="area">
+            <h3>{{artcle.title}}</h3>
+            <p class="h2">时间：{{artcle.time| date("MMMM yyyy  dd:HH:mm")}} 作者:{{artcle.username}}</p>
+            <div class="content">{{artcle.content|html }}</div>
+        </div>
+    </div>
+</div>

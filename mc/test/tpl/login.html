@@ -1,0 +1,26 @@
+<div class="main main_edi">
+    <h2>{{title}}</h2>
+    <div ms-controller="login">
+        <div class="area">
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="userName">用户名:</label>
+                    <input type="text" name="username" ms-duplex="login.username"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">密 码:</label>
+                    <input type="password" name="password"  ms-duplex="login.password"/>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-submit">提交</button>
+                </div>
+                <div class="form-group">
+                    <small>用户名:admin，密码：123456</small><br/>
+                    <small style="color:red">快乐学习。未做任何安全处理，请不要尝试输入测试数据，谢谢</small>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

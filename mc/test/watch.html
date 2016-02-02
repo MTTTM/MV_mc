@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ms-controller="test">
+
+</div>
+<script>
+    var assetsUrl="../assets/lib/";
+    var commonApi="";
+    var imageInterfaceUrl="";
+</script>
+<script src="../assets/lib/requirejs/require.js" ></script>
+<script src="../assets/lib/require-config.js"></script>
+<script>
+    require(["avalon","jquery"],function(avalon){
+            var vm=avalon.define({
+                $id:"test",
+                aa:{
+                    bb:{
+                        cc:1
+                    }
+                }
+            });
+        vm.aa.bb.$watch("cc",function(a,v){
+            avalon.log(a+"*********"+v);
+        });
+        setTimeout(function(){
+            vm.aa.bb.cc="ddddddd";
+        },1000)
+    })
+</script>
+
+</body>
+</html>

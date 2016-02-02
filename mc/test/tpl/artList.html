@@ -1,0 +1,22 @@
+<div class="main main_artList">
+    <h2>{{title}}</h2>
+    <div ms-controller="artList">
+        <div class="area">
+            <ul>
+                <li  ms-repeat="list">
+
+                    <h4>{{el.title}}</h4>
+                    <p class="h2">时间：{{el.time| date("MMMM yyyy  dd:HH:mm")}} 作者:{{el.username}}</p>
+                     <div class="content">
+                         {{el.content|html|truncate(201,"")|deleBack}}<a  ms-href="#!/article/details/{{el.id}}">查看</a>
+                     </div>
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="page-div clearfix">
+            <div class="page-right" ms-widget="pager,aa"></div>
+        </div>
+    </div>
+</div>

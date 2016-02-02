@@ -1,0 +1,22 @@
+.main_edi .form-group{
+    padding-left:200px;
+    position: relative;
+    height:30px;
+    margin-bottom: 20px;
+}
+.main_edi .form-group label{
+  margin-left:-60px;
+    color:#999;
+    text-align: right;
+    float: left;
+}
+.main_edi .form-group input{
+    height:20px;
+    padding:5px 10px;
+    border:1px solid #ccc;
+}
+.main_edi .form-group select{
+    height:32px;
+    width: 312px;
+    border:1px solid #ccc;
+}
